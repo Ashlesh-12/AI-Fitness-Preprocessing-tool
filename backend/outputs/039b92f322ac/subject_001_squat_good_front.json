@@ -1,0 +1,19 @@
+{
+  "video": "D:\\FitAI Preprocessing tool\\backend\\outputs\\uploads\\039b92f322ac.mp4",
+  "subject_id": "subject_001",
+  "exercise_folder": "squat",
+  "canonical_exercise": "bodyweight_squat",
+  "movement_group": "legs",
+  "form_quality": "good",
+  "angle_view": "front",
+  "total_frames": 953,
+  "pose_detected_frames": 953,
+  "kept_frames": 953,
+  "dropped_low_visibility_frames": 0,
+  "pose_detect_ratio": 1.0,
+  "kept_ratio": 1.0,
+  "overexposed_ratio": 0.0,
+  "brightness_mean": 118.4007,
+  "status": "ok",
+  "csv_path": "D:\\FitAI Preprocessing tool\\backend\\outputs\\039b92f322ac\\subject_001_squat_good_front.csv"
+}

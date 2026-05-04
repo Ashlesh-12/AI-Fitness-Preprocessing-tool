@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preprocessing Complete</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+  <main class="container">
+    <section class="card success">
+      <h1>Preprocessing Complete</h1>
+      <p>Your CSV file is ready.</p>
+
+      <div class="stats">
+        <p><strong>Rows:</strong> {{ rows }}</p>
+        <p><strong>FPS:</strong> {{ fps }}</p>
+        <p><strong>Duration:</strong> {{ duration }} sec</p>
+      </div>
+
+      <a class="btn" href="{{ url_for('download', csv_name=csv_name) }}">Download CSV</a>
+      <a class="link" href="{{ url_for('index') }}">Process another video</a>
+    </section>
+  </main>
+</body>
+</html>

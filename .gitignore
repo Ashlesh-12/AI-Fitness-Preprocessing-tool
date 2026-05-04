@@ -1,0 +1,15 @@
+﻿# Byte-compiled / caches
+__pycache__/
+*.pyc
+
+# Local runtime data
+uploads/*
+outputs/*
+!uploads/.gitkeep
+!outputs/.gitkeep
+
+# Env / IDE
+.venv/
+.env
+.vscode/
+.idea/
