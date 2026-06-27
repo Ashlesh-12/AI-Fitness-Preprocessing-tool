@@ -13,3 +13,7 @@ outputs/*
 .env
 .vscode/
 .idea/
+
+server.err.log
+server.out.log
+ARTICLE_DRAFT.md

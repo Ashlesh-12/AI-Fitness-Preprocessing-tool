@@ -22,9 +22,9 @@
         {% endif %}
       {% endwith %}
 
-      <form method="POST" enctype="multipart/form-data" class="upload-form">
+      <form method="POST" enctype="multipart/form-data" class="upload-form" id="uploadForm">
         <input type="file" name="video" accept="video/*" required />
-        <button type="submit">Preprocess Video</button>
+        <button type="submit" id="submitButton">Preprocess Video</button>
       </form>
 
       <ul class="notes">
@@ -34,5 +34,34 @@
       </ul>
     </section>
   </main>
+
+  <div class="loading-screen" id="loadingScreen" aria-live="polite" aria-hidden="true">
+    <div class="loading-panel">
+      <div class="pose-loader" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <h2>Preprocessing video</h2>
+      <p>Extracting pose landmarks and building your CSV file.</p>
+      <div class="progress-track">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const uploadForm = document.getElementById("uploadForm");
+    const submitButton = document.getElementById("submitButton");
+    const loadingScreen = document.getElementById("loadingScreen");
+
+    uploadForm.addEventListener("submit", () => {
+      loadingScreen.classList.add("is-visible");
+      loadingScreen.setAttribute("aria-hidden", "false");
+      submitButton.disabled = true;
+      submitButton.textContent = "Processing...";
+    });
+  </script>
 </body>
 </html>

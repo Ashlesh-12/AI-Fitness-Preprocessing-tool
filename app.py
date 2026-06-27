@@ -2,7 +2,6 @@
 import uuid
 from flask import Flask, render_template, request, send_file, flash, redirect, url_for
 from werkzeug.utils import secure_filename
-from preprocess import preprocess_video_to_csv
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 UPLOAD_DIR = os.path.join(BASE_DIR, "uploads")
@@ -45,6 +44,8 @@ def index():
         file.save(input_path)
 
         try:
+            from preprocess import preprocess_video_to_csv
+
             stats = preprocess_video_to_csv(input_path, output_csv)
         except Exception as exc:
             flash(f"Preprocessing failed: {exc}")
